@@ -20,24 +20,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Task Manager',
-      home: TaskListScreen(),
+      home: AuthGate(),
     );
   }
 }
 
-class AuthCheck extends StatelessWidget {
-  const AuthCheck({super.key});
-
+class AuthGate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
+    return StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.active) {
-          final user = snapshot.data;
-          return user != null ? TaskListScreen() : const LoginScreen();
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasData) {
+          return TaskListScreen();
         } else {
-          return const CircularProgressIndicator();
+          return const LoginScreen();
         }
       },
     );
