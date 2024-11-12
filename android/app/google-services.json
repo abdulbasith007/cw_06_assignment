@@ -1,8 +1,8 @@
 {
   "project_info": {
     "project_number": "321435976541",
-    "project_id": "inventory-management-flutter",
-    "storage_bucket": "inventory-management-flutter.firebasestorage.app"
+    "project_id": "cw-06-assignment",
+    "storage_bucket": "cw-06-assignment.firebasestorage.app"
   },
   "client": [
     {

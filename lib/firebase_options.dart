@@ -44,9 +44,9 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyCKCBrDlvq0lsGyEYWbnuS1iCxT_ePruQY',
     appId: '1:321435976541:web:3aa3a98b3fc9e393969eb4',
     messagingSenderId: '321435976541',
-    projectId: 'inventory-management-flutter',
-    authDomain: 'inventory-management-flutter.firebaseapp.com',
-    storageBucket: 'inventory-management-flutter.firebasestorage.app',
+    projectId: 'cw-06-assignment',
+    authDomain: 'cw-06-assignment.firebaseapp.com',
+    storageBucket: 'cw-06-assignment.firebasestorage.app',
     measurementId: 'G-SS6J410EYQ',
   );
 
@@ -54,16 +54,16 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyDUil11iAxKlywKk8T4EZ6Zmx3oPaI95Ek',
     appId: '1:321435976541:android:ef41b8bc1ac053de969eb4',
     messagingSenderId: '321435976541',
-    projectId: 'inventory-management-flutter',
-    storageBucket: 'inventory-management-flutter.firebasestorage.app',
+    projectId: 'cw-06-assignment',
+    storageBucket: 'cw-06-assignment.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCxo2MUThNbZl1n3eNd-MZjy0z3DYERNP4',
     appId: '1:321435976541:ios:29730dfa1a18fc95969eb4',
     messagingSenderId: '321435976541',
-    projectId: 'inventory-management-flutter',
-    storageBucket: 'inventory-management-flutter.firebasestorage.app',
+    projectId: 'cw-06-assignment',
+    storageBucket: 'cw-06-assignment.firebasestorage.app',
     iosBundleId: 'com.example.cw06Assignment',
   );
 
@@ -71,8 +71,8 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyCxo2MUThNbZl1n3eNd-MZjy0z3DYERNP4',
     appId: '1:321435976541:ios:29730dfa1a18fc95969eb4',
     messagingSenderId: '321435976541',
-    projectId: 'inventory-management-flutter',
-    storageBucket: 'inventory-management-flutter.firebasestorage.app',
+    projectId: 'cw-06-assignment',
+    storageBucket: 'cw-06-assignment.firebasestorage.app',
     iosBundleId: 'com.example.cw06Assignment',
   );
 
@@ -80,9 +80,9 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyCKCBrDlvq0lsGyEYWbnuS1iCxT_ePruQY',
     appId: '1:321435976541:web:be4d3c5cc7a8b4cc969eb4',
     messagingSenderId: '321435976541',
-    projectId: 'inventory-management-flutter',
-    authDomain: 'inventory-management-flutter.firebaseapp.com',
-    storageBucket: 'inventory-management-flutter.firebasestorage.app',
+    projectId: 'cw-06-assignment',
+    authDomain: 'cw-06-assignment.firebaseapp.com',
+    storageBucket: 'cw-06-assignment.firebasestorage.app',
     measurementId: 'G-3C6GM29XFY',
   );
 }
