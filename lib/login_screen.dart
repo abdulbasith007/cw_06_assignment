@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'task_list_screen.dart';
+import 'signup_screen.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _SignupScreenState createState() => _SignupScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  Future<void> signup() async {
+  Future<void> login() async {
     try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
-      Navigator.pop(context);
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => TaskListScreen()));
     } catch (e) {
-      print('Signup failed: $e');
+      print('Login failed: $e');
     }
   }
 
@@ -44,8 +47,15 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: signup,
-              child: const Text('Signup'),
+              onPressed: login,
+              child: const Text('Login'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SignupScreen()));
+              },
+              child: const Text('Create an account'),
             ),
           ],
         ),
